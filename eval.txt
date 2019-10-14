@@ -1,0 +1,40 @@
+Evaluation base de données 01
+-----------------------------
+
+1/ Créer une base de donnée nommée "ville"
+2/ Intégrer les 2 tables: departement.sql et villes_france.sql
+3/ Plus d'informations sur la table villes dans https://sql.sh/736-base-donnees-villes-francaises
+
+4/ Supprimer les colonnes suivantes de la table ville:
+Slug : identifiant unique en minuscule, sans accent et sans espace. Peut servir pour faire les URLs d’un site web.
+Nom : nom en majuscule et sans accent.
+Nom soundex : soundex du nom de la ville (permet de trouver des villes qui se prononcent presque pareil) [ajouté le 31/10/2013]
+Nom metaphone : metaphone du nom de la ville (même utilité que le soundex) [ajouté le 31/10/2013]
+Numéro de commune : numéro de la commune dans le département. Combiné avec le numéro de département, il permet de créer le code INSEE sous 5 caractères.
+Code commune (ou code INSEE) : identifiant unique sous 5 caractères
+Arrondissement : arrondissement de la ville
+Canton : canton de la ville
+Population en 2010 : nombre d’habitants lors du recensement de 2010
+Population en 1999 : nombre d’habitants lors du recensement de 1999
+Population en 2012 (approximatif) : valeur exprimée en centaine
+Densité en 2010 : nombre d’habitants au kilomètre carré arrondie à l’entier. Calculé à partir du nombre d’habitant et de la surface de la ville [corrigé le 02/07/2014]
+Surface / superficie : surface de la ville en kilomètre carrée [corrigé le 02/07/2014]
+Longitude/latitude en GRD : géolocalisation exprimée en GRD
+Longitude/latitude en DMS (Degré Minute Seconde) : géolocalisation exprimée en Degré Minute Seconde
+Altitude minimale/maximale : hauteur minimum et maximum de la ville par rapport au niveau de l’eau
+
+5/ Supprimer les colonnes suivantes de la table département:
+departement_id
+departement_nom_uppercase
+departement_slug
+departement_nom_soundex
+
+6/ Créer les clés primaires sur les tables. Justifier vos choix.
+7/ Créer les clés étrangères. Justifier vos choix
+8/ Est-ce que votre base de données permet de conserver l'intégrité référentielle ?
+9/ Exporter la structure de votre base de données dans un fichier SQL
+10/ Exporter la structure+les données de votre base de données dans un fichier SQL
+11/ Ecrire les requetes SQL suivantes:
+Rechercher les villes du département 42
+Rechercher les villes commençant par "mar"
+Afficher les villes ayant une lattitude comprise entre 44.5 et 45.5 en indiquant le nom du département
